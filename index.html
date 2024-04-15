@@ -7,14 +7,67 @@
 </head>
 <body>
     <h1>Countries API</h1>
-    <form>
-        <input type="text" name="country" id="country">
-        <input type="submit" value="search">
-    </form>
-    <div>
-        <h2>Kenya</h2>
-        <img src="" height="400px" alt="flag">
+    <h2>
+        <span>Select Region </span>
+        <select name="region" id="region">
+            <option value="africa">Africa</option>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="america">America</option>
+        </select>  
+    </h2>
+    <div class="countries">
+        <div class="country">
+            <img src="" alt="">
+            <h3>Name</h3>
+            <p>capitals</p>
+        </div>
     </div>
+    <div class="country-modal" id="country-modal">
+        <div class="content">
+            <div class="main-info">
+                <img src="" alt="" id="modal-image" >
+                <h4 id="modal-name">Name</h4>
+                <p id="modal-capitals">Capital</p>
+            </div>
+            <div class="more-info">
+                <button class="close-btn" id="close-btn">CLOSE</button>
+                <p>Independance: <span id="independance"></span> </p>
+                <p>Languages: <span id="languages"></span> </p>
+                <p>Population: <span id="population"></span> </p>
+                <p>Currency: <span id="currency"></span> </p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .country-modal{
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.395);
+            padding: 100px;
+            
+        }
+        .hide{
+            display: none;
+        }
+        .content{
+            background-color: white;
+            display: flex;
+            gap: 20px;
+            border-radius: 11px;
+            padding: 20px;
+        }
+        .content>div{
+            flex: 1;
+        }
+        .content img{
+            width: 100%;
+        }
+        .close-btn{
+            margin-left: auto;
+            display: block;
+        }
+    </style>
     <script src="index.js"></script>
 </body>
 </html>

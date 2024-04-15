@@ -1,5 +1,5 @@
 
-fetch("https://restcountries.com/v3.1/name/russia")
+fetch("https://restcountries.com/v3.1/region/africa")
     .then(res=>res.json())
     .then(data=>console.log(data))
 
